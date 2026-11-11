@@ -17,8 +17,8 @@ and the setup image you keep.
 [![Windows](https://img.shields.io/badge/Windows-10%20%26%2011-010521)](#getting-started)
 [![Desktop](https://img.shields.io/badge/App-desktop-101638)](#getting-started)
 
-**[Getting started](#getting-started)** · **[Features](#features)** ·
-**[Contributing](CONTRIBUTING.md)** · **[Security](SECURITY.md)**
+**[Website](https://loom.tomfleuren.nl/)** · **[Getting started](#getting-started)** ·
+**[Features](#features)** · **[Contributing](CONTRIBUTING.md)** · **[Security](SECURITY.md)**
 
 </div>
 
