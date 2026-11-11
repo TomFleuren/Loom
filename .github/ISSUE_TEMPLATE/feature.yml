@@ -1,0 +1,17 @@
+name: Idea
+description: A change you want in Loom.
+title: ""
+labels: ["idea"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What should Loom do
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it matters
+    validations:
+      required: false

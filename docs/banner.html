@@ -1,0 +1,206 @@
+<!doctype html>
+<!-- Source of the README banner. Open this file and capture the .banner at 1280×640. -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Loom banner</title>
+    <style>
+      @font-face {
+        font-family: Geist;
+        font-weight: 400;
+        src: url("../node_modules/@fontsource/geist/files/geist-latin-400-normal.woff2") format("woff2");
+      }
+      @font-face {
+        font-family: Geist;
+        font-weight: 500;
+        src: url("../node_modules/@fontsource/geist/files/geist-latin-500-normal.woff2") format("woff2");
+      }
+      @font-face {
+        font-family: Geist;
+        font-weight: 600;
+        src: url("../node_modules/@fontsource/geist/files/geist-latin-600-normal.woff2") format("woff2");
+      }
+
+      :root {
+        --ink: #010521;
+        --muted: #6b7280;
+        --faint: #9aa0ab;
+        --soft: #f3f4f6;
+        --cyan: #97e6ff;
+        --dark: #101638;
+      }
+
+      * { box-sizing: border-box; }
+      html, body { margin: 0; }
+
+      .banner {
+        position: relative;
+        width: 1280px;
+        height: 640px;
+        overflow: hidden;
+        background:
+          radial-gradient(520px 320px at 100% -10%, rgba(151, 230, 255, 0.7), transparent 70%),
+          var(--soft);
+        color: var(--ink);
+        font: 500 14px/1.4 Geist, "Segoe UI Variable", sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .card {
+        position: absolute;
+        background: #fff;
+        border-radius: 22px;
+        box-shadow: 0 18px 50px rgba(1, 5, 33, 0.06), 0 0 0 1px rgba(1, 5, 33, 0.08);
+      }
+
+      .kicker {
+        margin: 0 0 12px;
+        color: var(--faint);
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .row {
+        display: grid;
+        grid-template-columns: 28px 1fr auto;
+        gap: 10px;
+        align-items: center;
+        padding: 8px 0;
+      }
+      .row b { font-weight: 600; letter-spacing: -0.02em; }
+      .row span { display: block; color: var(--muted); font-size: 12px; font-weight: 400; }
+
+      .icon {
+        width: 28px;
+        height: 28px;
+        border-radius: 8px;
+        background: var(--soft);
+      }
+      .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        box-shadow: inset 0 0 0 1.5px rgba(1, 5, 33, 0.28);
+      }
+      .dot.on { background: var(--cyan); box-shadow: none; }
+
+      .picked {
+        margin: 0 -10px;
+        padding: 8px 10px;
+        border-radius: 16px;
+        box-shadow: inset 0 0 0 2px var(--cyan);
+      }
+
+      .mark {
+        position: absolute;
+        left: 50%;
+        top: 248px;
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        translate: -50% 0;
+      }
+      .mark svg { width: 72px; height: 72px; display: block; }
+      .mark strong {
+        font-size: 84px;
+        font-weight: 500;
+        letter-spacing: -0.055em;
+        line-height: 0.9;
+      }
+
+      .switch {
+        width: 36px;
+        height: 22px;
+        padding: 2px;
+        border-radius: 999px;
+        background: #e5e7eb;
+      }
+      .switch i {
+        display: block;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: #fff;
+      }
+      .switch.on { background: var(--cyan); }
+      .switch.on i { margin-left: 14px; }
+
+      .pills { display: flex; gap: 8px; }
+      .pill {
+        height: 32px;
+        padding: 0 14px;
+        border-radius: 999px;
+        background: #fff;
+        box-shadow: 0 0 0 1px rgba(1, 5, 33, 0.12);
+        font-weight: 600;
+        line-height: 32px;
+      }
+      .pill.on { background: var(--cyan); box-shadow: none; color: var(--dark); }
+
+      .quiet { color: var(--muted); font-size: 13px; font-weight: 500; }
+    </style>
+  </head>
+  <body>
+    <div class="banner">
+      <article class="card" style="left: 64px; top: 48px; width: 320px; padding: 16px 18px 8px;">
+        <p class="kicker">Install</p>
+        <div class="row picked">
+          <i class="icon" style="background: #e8f7ff;"></i>
+          <div><b>1Password</b><span>Password manager</span></div>
+          <i class="dot on"></i>
+        </div>
+        <div class="row">
+          <i class="icon"></i>
+          <div><b>7-Zip</b><span>Open source</span></div>
+          <i class="dot"></i>
+        </div>
+        <div class="row">
+          <i class="icon"></i>
+          <div><b>Visual Studio Code</b><span>Editor</span></div>
+          <i class="dot"></i>
+        </div>
+      </article>
+
+      <article class="card" style="right: 64px; top: 56px; width: 340px; padding: 16px 18px 10px;">
+        <p class="kicker">Preferences</p>
+        <div class="row" style="grid-template-columns: 36px 1fr;">
+          <i class="switch on"><i></i></i>
+          <div><b>Dark mode</b><span>Apps and system</span></div>
+        </div>
+        <div class="row" style="grid-template-columns: 36px 1fr;">
+          <i class="switch"><i></i></i>
+          <div><b>Sticky Keys</b><span>Off unless you turn it on</span></div>
+        </div>
+        <div class="row" style="grid-template-columns: 36px 1fr;">
+          <i class="switch on"><i></i></i>
+          <div><b>File extensions</b><span>Shown in Explorer</span></div>
+        </div>
+      </article>
+
+      <div class="mark">
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+          <rect x="1" y="1" width="30" height="30" rx="8" fill="#010521" />
+          <path d="M9 16.2c2.2-3.4 4.6-5.2 7-5.2 2.6 0 4.2 1.6 4.2 3.7 0 4.2-6.4 3.6-6.4 6.6 0 1.2.8 2 2.2 2 1.6 0 3.2-.8 4.6-2.2" fill="none" stroke="#97e6ff" stroke-width="2.2" stroke-linecap="round" />
+        </svg>
+        <strong>Loom</strong>
+      </div>
+
+      <article class="card" style="left: 96px; bottom: 52px; padding: 16px 18px;">
+        <p class="kicker">Presets</p>
+        <div class="pills">
+          <span class="pill">Minimal</span>
+          <span class="pill on">Standard</span>
+          <span class="pill">Advanced</span>
+        </div>
+      </article>
+
+      <article class="card" style="right: 88px; bottom: 48px; width: 300px; padding: 16px 18px;">
+        <p class="kicker">Windows</p>
+        <b style="display: block; letter-spacing: -0.02em;">Setup image</b>
+        <p class="quiet" style="margin: 6px 0 0;">Answer file ready. Nothing written yet.</p>
+      </article>
+    </div>
+  </body>
+</html>
